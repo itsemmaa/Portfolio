@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>EMMA BARNETT</title>
+	<script type="text/javascript"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+	
+<body>
+	
+	<header>
+		<h1>EMMA BARNETT</h1>
+		<nav>
+			<a href="">ABOUT ME</a>
+			<a href="">CONTACT</a>
+		</nav>
+	</header>
+	
+	<div id="landingPage">
+		<h2>EMMA<br>BARNETT</h2>
+	</div>
+	
+	<div id="portfolio">
+		<h3>PORTFOLIO</h3>
+		
+		<div id="accordion1">
+			<button class="accordion">WEB DEVELOPMENT & DESIGN</button>
+			<div class="panel">
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+			</div>
+
+			<button class="accordion">USER EXPERIENCE DESIGN</button>
+			<div class="panel">
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+			</div>
+
+			<button class="accordion">PHOTOGRAPHY</button>
+			<div class="panel">
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+			</div>
+			
+			<button class="accordion">ILLUSTRATION</button>
+			<div class="panel">
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+			</div>
+			
+			<button class="accordion">3D MODELING</button>
+			<div class="panel">
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+			</div>
+			
+			<button class="accordion">ANIMATION</button>
+			<div class="panel">
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div id="resume">
+		<h3>RESUME</h3>
+		
+		<div id="accordion2">
+			<button class="accordion">EDUCATION</button>
+			<div class="panel">
+				<div class="column"><img src="images/Purdue.jpg"><h4>PURDUE UNIVERSITY</h4><p>Web Programming & Design B.S.</br>Psychology Minor</br>2021-2025 | 3.63 GPA</p></div>
+				<div class="column"><img src="images/Fchs.jpg"><h4>FRANKLIN CENTRAL HIGH SCHOOL</h4><p>Franklin Central Honors</br>2017-2021 | 4.0 GPA</br> </br></p></div>
+			</div>
+
+			<button class="accordion">WORK EXPERIENCE</button>
+			<div class="panel">
+			  <div class="column"><img src="images/Polytech.jpg"><h4>WEB DEVELOPER</h4><p>Purdue Polytechnic Institute</br>May 2024-Present</br>See More...</p></div>
+			  <div class="column"><img src="images/Cp.jpg"><h4>CAMP PHOTOGRAPHER</h4><p>Connor Prairie</br>May 2023-Aug 2023</br>See More...</p></div>
+			  <div class="column"><img src="images/Target.jpg"><h4>REMODEL / GENERAL MERCHANDISE</h4><p>Target</br>May 2022-Jul 2022</br>See More...</p></div>
+			  <div class="column"><img src="images/Gu.JPG"><h4>CHEER COACH</h4><p>Gymnastics Unlimited</br>May 2017-May 2021</br>See More...</p></div>
+			</div>
+
+			<button class="accordion">VOLUNTEERING</button>
+			<div class="panel">
+			  <p>Lorem ipsum...</p>
+			</div>
+		</div>
+	</div>
+	
+			<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+			  acc[i].addEventListener("click", function() {
+				/* Toggle between adding and removing the "active" class,
+				to highlight the button that controls the panel */
+				this.classList.toggle("active");
+
+				/* Toggle between hiding and showing the active panel */
+				var panel = this.nextElementSibling;
+				if (panel.style.display === "block") {
+				  panel.style.display = "none";
+				} else {
+				  panel.style.display = "block";
+				}
+			  });
+			}
+		</script>
+	
+	
+</body>
+	
+</html>
