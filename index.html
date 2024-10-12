@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>EMMA BARNETT</title>
 	<script type="text/javascript"></script>
 	<link rel="stylesheet" href="style.css">
@@ -9,11 +10,12 @@
 	
 <body>
 	
+<!--- LANDING PAGE --->
 	<header>
-		<h1>EMMA BARNETT</h1>
+		<h1><a href="index.html">EMMA BARNETT</a></h1>
 		<nav>
-			<a href="">ABOUT ME</a>
-			<a href="">CONTACT</a>
+			<a href="contact.html">CONTACT</a>
+			<a href="about.html">ABOUT ME</a>
 		</nav>
 	</header>
 	
@@ -26,82 +28,147 @@
 		<h2>EMMA<br>BARNETT</h2>
 	</div>
 	
+<!--- PORTFOLIO --->
 	<div id="portfolio">
 		<h3>PORTFOLIO</h3>
-		
+
 		<div id="accordion1">
+			<!--- WEB DEV --->
 			<button class="accordion">WEB DEVELOPMENT & DESIGN</button>
 			<div class="panel">
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<a href="web/CGT141 - Crochet Site/index.html"><div class="column"><img src="web/thumbnails/Crochet.png"><h4>HTML | CSS | Javascript</h4></div></a>
+				<a href="web/CGT353 - Payment Form/index.html"><div class="column"><img src="web/thumbnails/PaymentForm.png"><h4>HTML | CSS | PHP | MySQL</h4></div></a>
+				<a href="web/CGT353 - Hangman/index.html"><div class="column"><img src="web/thumbnails/hangman.png"><h4>HTML | Javascript | C# | ASP</h4></div></a>
+				<a href="web/CGT353 - Responsive Design/RDpart2.html"><div class="column"><img src="web/thumbnails/lemon.png"><h4>Javascript</h4></div></a>
+				<a href="web/CGT353 - Slideshow:Ads/index.html"><div class="column"><img src="web/thumbnails/slideshow.png"><h4>Javascript</h4></div></a>
+				<a href="web/CGT353 - Scientists/index.html"><div class="column"><img src="web/thumbnails/philosophy.png"><h4>HTML | CSS | Javascript</h4></div></a>
+				<a href="web/CGT353 - Zoom/index.html"><div class="column"><img src="web/thumbnails/zoom.png"><h4>HTML | CSS | Javascript</h4></div></a>
 			</div>
-
+			
+			<!--- UX --->
 			<button class="accordion">USER EXPERIENCE DESIGN</button>
 			<div class="panel">
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<a href=""><div class="column"><img src="ux/UX.png"><h4>PROJECT</h4></div></a>
 			</div>
 
+			<!--- PHOTOGRAPHY --->
 			<button class="accordion">PHOTOGRAPHY</button>
 			<div class="panel">
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src="photo/thumbnails/bluejay.jpg" onclick="showOverlay('photo/bluejay.jpg')"></div>
+				<div class="column"><img src="photo/thumbnails/highfive.jpg" onclick="showOverlay('photo/highfive.jpg')"></div>
+				<div class="column"><img src="photo/thumbnails/flowers.JPG" onclick="showOverlay('photo/flowers.jpg')"></div>
+				<div class="column"><img src="photo/thumbnails/galway.JPG" onclick="showOverlay('photo/galway.jpg')"></div>
+				<div class="column"><img src="photo/thumbnails/rabbit.JPG" onclick="showOverlay('photo/rabbit.jpg')"></div>
+				<div class="column"><img src="photo/thumbnails/royalty.JPG" onclick="showOverlay('photo/royalty.jpg')"></div>
 			</div>
 			
+			<div id="overlay" class="overlay" onclick="hideOverlay()">
+				<span class="close" onclick="hideOverlay()">&times;</span>
+				<img id="overlay-image" class="overlay-image" src="" alt="Overlay Image">
+				<div id="overlay-text-container" class="overlay-text-container">
+					<p id="overlay-text" class="overlay-text"></p>
+				</div>
+			</div>
+			
+			
+			<!--- ILLUSTRATIONS --->
 			<button class="accordion">ILLUSTRATION</button>
 			<div class="panel">
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src="illus/thumbnails/Frame.jpeg" onclick="showOverlay('illus/Frame.jpeg')"><h4>FRAMED VACATION</h4></div>
+				<div class="column"><img src="illus/thumbnails/BelleVanity.JPG" onclick="showOverlay('illus/BelleVanity.jpg')"><h4>BELLE'S VANITY</h4></div>
+				<div class="column"><img src="illus/thumbnails/Fantasy.JPG" onclick="showOverlay('illus/Fantasy.jpg')"><h4>PORTAL</h4></div>
+				<div class="column"><img src="illus/thumbnails/Pirate.jpeg" onclick="showOverlay('illus/Pirate.jpeg')"><h4>STAINED GLASS</h4></div>
+				<div class="column"><img src="illus/thumbnails/StillLife.jpg" onclick="showOverlay('illus/StillLife.jpg')"><h4>STILL LIFE</h4></div>
 			</div>
 			
+			<!--- 3D --->
 			<button class="accordion">3D MODELING</button>
 			<div class="panel">
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<a href="model-desk.html"><div class="column"><img src="model/thumbnails/desk.png"></div></a>
+				<a href="model-plant.html"><div class="column"><img src="model/thumbnails/plants.png"></div></a>
+				<a href="model-pillar.html"><div class="column"><img src="model/thumbnails/pillar.png"></div></a>
+				<a href="model-character.html"><div class="column"><img src="model/thumbnails/pooh.png"></div></a>
+				<a href="model-island.html"><div class="column"><img src="model/thumbnails/island.png"></div></a>
+				<a href="model-lamp.html"><div class="column"><img src="model/thumbnails/lamp.png"></div></a>
+				<a href="model-castle.html"><div class="column"><img src="model/thumbnails/castle.png"></div></a>
+				<a href="model-block.html"><div class="column"><img src="model/thumbnails/blocks.png"></div></a>
+				<a href="model-name.html"><div class="column"><img src="model/thumbnails/name.png"></div></a>
 			</div>
 			
-			<button class="accordion">ANIMATION</button>
+			<!--- GRAPHIC --->
+			<button class="accordion">GRAPHIC DESIGN</button>
 			<div class="panel">
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
-				<div class="column"><img src=""><h4>TITLE</h4><a href="">See More...</a></div>
+				<div class="column"><img src="graph/thumbnails/disco.jpeg" onclick="showOverlay('graph/disco.jpeg')"></div>
+				<div class="column"><img src="graph/thumbnails/inforgraphic.png" onclick="showOverlay('graph/infographic.png')"></div>
+				<div class="column"><img src="graph/thumbnails/water.jpeg" onclick="showOverlay('graph/water.jpeg')"></div>
+				<div class="column"><img src="graph/thumbnails/codedDesign.png" onclick="showOverlay('graph/codedDesign.png')"></div>
+				<div class="column"><img src="graph/thumbnails/cherry.jpeg" onclick="showOverlay('graph/cherry.jpeg')"></div>
+				<div class="column"><img src="graph/thumbnails/shrek.png" onclick="showOverlay('graph/shrek.png')"></div>
 			</div>
 			
 		</div>
 	</div>
 	
+<!--- RESUME --->
 	<div id="resume">
 		<h3>RESUME</h3>
 		
 		<div id="accordion2">
 			<button class="accordion">EDUCATION</button>
 			<div class="panel">
-				<div class="column"><img src="images/Purdue.jpg"><h4>PURDUE UNIVERSITY</h4><p>Web Programming & Design B.S.</br>Psychology Minor</br>2021-2025 | 3.63 GPA</p></div>
-				<div class="column"><img src="images/Fchs.jpg"><h4>FRANKLIN CENTRAL HIGH SCHOOL</h4><p>Franklin Central Honors</br>2017-2021 | 4.0 GPA</br> </br></p></div>
+				<a href="education-purdue.html"><div class="column"><img src="images/Purdue.jpg">
+					<h4>PURDUE UNIVERSITY</h4>
+						<p>Web Programming & Design B.S.<br>
+						Psychology Minor<br>
+						2021-2025 | 3.63 GPA</p></div></a>
+				<a href="education-fc.html"><div class="column"><img src="images/Fchs.jpg">
+					<h4>FRANKLIN CENTRAL HIGH SCHOOL</h4>
+					<p>Franklin Central Honors<br>
+						2017-2021 | 4.0 GPA<br> 
+						<br></p></div></a>
 			</div>
 
 			<button class="accordion">WORK EXPERIENCE</button>
 			<div class="panel">
-			  <div class="column"><img src="images/Polytech.jpg"><h4>WEB DEVELOPER</h4><p>Purdue Polytechnic Institute</br>May 2024-Present</br>See More...</p></div>
-			  <div class="column"><img src="images/Cp.jpg"><h4>CAMP PHOTOGRAPHER</h4><p>Connor Prairie</br>May 2023-Aug 2023</br>See More...</p></div>
-			  <div class="column"><img src="images/Target.jpg"><h4>REMODEL / GENERAL MERCHANDISE</h4><p>Target</br>May 2022-Jul 2022</br>See More...</p></div>
-			  <div class="column"><img src="images/Gu.JPG"><h4>CHEER COACH</h4><p>Gymnastics Unlimited</br>May 2017-May 2021</br>See More...</p></div>
+			  <a href="work-purdue.html"><div class="column"><img src="images/Polytech.jpg">
+				  <h4>WEB DEVELOPER</h4>
+				  <p>Purdue Polytechnic Institute<br>
+				  May 2024-Present<br></p>
+				</div></a>
+			  <a href="work-cp.html"><div class="column"><img src="images/Cp.jpg">
+				  <h4>CAMP PHOTOGRAPHER</h4>
+				  <p>Connor Prairie<br>
+				  May 2023-Aug 2023<br></p>
+				</div></a>
+			  <a href="work-target.html"><div class="column"><img src="images/Target.jpg">
+				  <h4>REMODEL / GENERAL MERCHANDISE</h4>
+				  <p>Target<br>
+				  May 2022-Jul 2022<br></p>
+				</div></a>
+			  <a href="work-gu.html"><div class="column"><img src="images/Gu.JPG">
+				  <h4>CHEER COACH</h4>
+				  <p>Gymnastics Unlimited<br>
+				  May 2018-May 2021<br></p>
+				</div></a>
 			</div>
 
 			<button class="accordion">VOLUNTEERING</button>
 			<div class="panel">
-			  <p>Lorem ipsum...</p>
+			  <a href="volunteer-purdue.html"><div class="column"><img src="images/Polytech.jpg">
+				  <h4>STUDENT AMBASSADOR</h4>
+				  <p>Purdue Polytechnic Institute<br>
+				  Spring 2022-Present<br></p>
+				</div></a>
+			  <a href="volunteer-gu.html"><div class="column"><img src="images/Gu.JPG">
+				  <h4>ASSISTANT CHEER COACH</h4>
+				  <p>Gymnastics Unlimited<br>
+				  May 2017-May 2018<br></p>
+				</div></a>
 			</div>
 		</div>
 	</div>
+	
+	<footer>Questions? Feel free to <a href="contact.html">contact</a> me.</footer>
 	
 			<script>
 			var acc = document.getElementsByClassName("accordion");
@@ -121,6 +188,23 @@
 				  panel.style.display = "block";
 				}
 			  });
+			}
+			
+			function showOverlay(imageSrc, text) {
+				const overlay = document.getElementById('overlay');
+				const overlayImage = document.getElementById('overlay-image');
+				const overlayText = document.getElementById('overlay-text');
+
+				overlayImage.src = imageSrc;
+				overlayText.textContent = text; // Set the overlay text
+				overlay.style.display = 'flex'; // Show the overlay
+				document.body.style.overflow = 'hidden'; // Disable background scroll
+			}
+
+			function hideOverlay() {
+				const overlay = document.getElementById('overlay');
+				overlay.style.display = 'none'; // Hide the overlay
+				document.body.style.overflow = ''; // Enable background scroll
 			}
 		</script>
 	
