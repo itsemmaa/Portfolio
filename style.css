@@ -4,14 +4,15 @@
 	padding: 0;
 	margin: 0;
 }
+/* ---------- INDEX PAGE ---------- */
 header {
 	width: 100%;
-	height: 50px;
-	position: fixed;
+	height: 55px;
+	position:fixed;
 	background-color: #f9f8ef;
 	z-index: 50;
 }
-h1 a {
+h1 a { /* Title Name */
 	font-size: 20pt;
 	width: 439px;
 	float: left;
@@ -19,18 +20,37 @@ h1 a {
 	padding-top: 20px;
 	text-decoration: none;
 }
-nav a{
+nav a {
 	float: right;
-	width: 250px;
+	width: auto;
 	font-size: 16pt;
+	padding-top: 25px;
+	text-decoration: none;
+	text-align: center;
+	margin-right: 100px;
+}
+nav a::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #293425;
+	display: block;
+	margin: auto;
+	transition: 0.4s;
+}
+nav a:hover::after{
+	width: 100%
 }
 #landingPage {
-	width: 100%;
+	width: 100vw;
 	height: 982px;
+	font-size: 100%;
 }
-h2 {
+h2 { /* Landing Name */
 	text-align: center;
-	font-size: 235pt;
+	font-size: 21.7vw;
+	width: 100%;
+	justify-content: center;
 	overflow: hidden;
 	position: absolute;
 	background: none;
@@ -41,11 +61,11 @@ h2 {
 }
 #photo1 {
 	background-color: rgba(237,237,237,0.2);
-	background-image: url("images/Bird.jpg");
+	background-image: url("images/pinkFlower.JPG");
 	position: absolute;
 	width: 225px;
 	height: 281px;
-	left: 130px;
+	left: 160px;
 	top: 100px;
 	rotate: -5.59deg;
 	z-index: 1;
@@ -54,7 +74,7 @@ h2 {
 }
 #photo2 {
 	background-color: rgba(237,237,237,0.2);
-	background-image: url("images/Plants.JPG");
+	background-image: url("images/Bird.jpg");
 	position: absolute;
 	width: 225px;
 	height: 281px;
@@ -66,11 +86,11 @@ h2 {
 }
 #photo3 {
 	background-color: rgba(237,237,237,0.2);
-	background-image: url("images/Flower.JPG");
+	background-image: url("images/arch.JPG");
 	position: absolute;
 	width: 225px;
 	height: 281px;
-	right: 270px;
+	right: 300px;
 	bottom: 20px;
 	rotate: 4.52deg;
 	background-blend-mode: overlay;
@@ -89,11 +109,11 @@ h2 {
 }
 #photo5 {
 	background-color: rgba(237,237,237,0.2);
-	background-image: url("images/Ocean.JPG");
+	background-image: url("images/peony.JPG");
 	position: absolute;
 	width: 225px;
 	height: 281px;
-	right: 180px;
+	right: 150px;
 	bottom: -10px;
 	rotate: 27.76deg;
 	background-blend-mode: overlay;
@@ -102,6 +122,73 @@ h3 {
 	padding: 20px 80px;
 	font-size: 32pt;
 }
+footer {
+	width: 100vw;
+	height: 70px;
+	padding: 0;
+	margin: 0;
+	font-size: 25px;
+	text-align: center;
+}
+footer a:hover {
+	color: #77976c;
+	transition: 0.3s ease-in-out;
+}
+
+/* ---------- ABOUT ---------- */
+
+#aboutContainer {
+	width: 100vw;
+	height: 93vh;
+}
+#aboutImg {
+	width: 350px;
+	height: auto;
+	border-top-left-radius: 25ch; /* ch - relative to the width of the content */
+	border-top-right-radius: 25ch;
+	position: absolute;
+	top: 15vh;
+	left: 10vw;
+}
+#aboutTextContainer {
+	position: absolute;
+	top: 30vh;
+	left: 40vw;
+	width: 700px;
+	height: 350px;
+	font-size: 14pt;
+}
+#aboutTextContainer h1 {
+	margin-left: 80px;
+	font-size: 50px;
+}
+#aboutTextContainer h2 {
+	font-size: 40px;
+	margin-left: 80px;
+}
+#aboutTextContainer #aboutBio {
+	text-align: center;
+}
+#aboutTextContainer #skills {
+	
+}
+
+/* ---------- CONTACT ---------- */
+
+#contactContainer {
+	background-color: rgba(10,10,10,0.7);
+	width: 600px;
+	height: 670px;
+	position: absolute;
+	top: 7vh;
+	left: 25vw;
+	border-radius: 3ch;
+}
+
+
+
+/* ----- PORTFOLIO ----- */
+
 #accordion1, #accordion2 {
 	padding: 10px 200px 100px 200px;
 }
@@ -148,40 +235,149 @@ h3 {
 #accordion1 .column {
 	width: 338px;
 	float: left;
-	border: 1px solid black;
 	padding: 15px;
+	transition: 0.5s;
+}
+#accordion1 .column:hover {
+	transform:translateY(-5px);
+	cursor: pointer;
 }
 #accordion1 .column img {
 	background-color: lightgray;
 	width: 300px;
 	height: 300px;
-	margin: 19px;
+	margin: 5px 19px;
+	border: 1px solid #293425;
 }
 #accordion1 .column h4 {
-	text-align: center;
-	font-size: 18pt;
+	margin-left: 25px;
+	margin-top: -5px;
+	font-style: italic;
+	font-size: 12pt;
 	margin-bottom: 5px;
+	font-weight: 100;
+	color: #293425;
 }
 #accordion1 .column a {
 	text-align: center;
 }
+
+/* ----- OVERLAY CONTENT ----- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure it's on top */
+}
+.overlay-content {
+    background-color: rgba(0,0,0,0);
+    text-align: center;
+}
+.close {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+	background-color: rgba(0,0,0,0);
+}
+.overlay img {
+	max-width: 70%;
+	max-height: 90%;
+}
+
+/* ----- RESUME ----- */
+
 #accordion2 .column {
-	width: 524px;
+	width: 526px;
 	float: left;
-	border: 1px solid black;
 	padding: 15px;
+	transition: 0.5s;
+}
+#accordion2 .column:hover {
+	transform:translateY(-5px);
+	cursor: pointer;
 }
 #accordion2 .column img {
 	background-color: lightgray;
 	width: 400px;
 	height: 300px;
 	margin: 20px 62px;
+	border: 1px solid #293425;
 }
 #accordion2 .column h4 {
 	text-align: center;
 	font-size: 18pt;
 	margin-bottom: 5px;
+	font-weight: 100;
+	background: none;
 }
 #accordion2 .column p {
 	text-align: center;
+	background: none;
+}
+
+/* ---------- EDUCATION - PURDUE ---------- */
+
+.body {
+	max-width: 100%;
+	height: 90vh;
+	margin-top: 55px;
+	padding-left: 100px;
+	position: absolute;
+	align-content: center;
+}
+.header {
+	font-size: 30px;
+}
+.text {
+	padding: 0 65px;
+	margin: 10px 0px 30px;
+	font-size: 18px;
+}
+
+.sketchfab-embed-wrapper {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+}
+
+/* ---------- WORK - GU ---------- */
+
+#gu .text {
+	padding: 0 40px;
+}
+#gu a h1:hover {
+	color: green;
+	transition: 0.5s ease-in-out;
+	text-decoration: none;
+}
+
+/* ---------- PHOTOGRAPHY PAGES ---------- */
+
+
+.photo {
+	width: 60%;
+	display: block;
+	margin-left: auto;
+ 	margin-right: auto;
+}
+.photo img {
+	width: 100%;
+	height: auto;
+	padding-top: 100px;
+}
+.photo p {
+	float: right;
+	margin-top: 5px;
+	font-size: 18px;
 }
